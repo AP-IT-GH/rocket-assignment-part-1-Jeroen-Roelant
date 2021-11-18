@@ -9,7 +9,7 @@ public class RocketController : MonoBehaviour
 
     void Thrust()
     {
-        rb.AddRelativeForce(Vector3.up * 3);
+        rb.AddRelativeForce(Vector3.up * 25);
 
     }
 
@@ -20,7 +20,7 @@ public class RocketController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -30,22 +30,22 @@ public class RocketController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             
-            transform.Rotate(-0.2f, 0, 0);
+            transform.Rotate(-0.8f, 0, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             
-            transform.Rotate(0.2f, 0, 0);
+            transform.Rotate(0.8f, 0, 0);
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             
-            transform.Rotate(0, 0, 0.2f);
+            transform.Rotate(0, 0, 0.8f);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             
-            transform.Rotate(0, 0, -0.2f);
+            transform.Rotate(0, 0, -0.8f);
         }
     }
 }
